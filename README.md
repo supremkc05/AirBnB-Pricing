@@ -33,3 +33,8 @@ Air-BnB-Pricing/
 #### 3. **Economic Efficiency Metrics**
 #### 4. **Premium Classification**
 #### 5. **Price Normalization**
+
+## cleaned data saved in data folder
+df.to_csv('../data/cleaned_airbnb.csv')
+
+## 📊 Exploratory Data Analysis (EDA)
