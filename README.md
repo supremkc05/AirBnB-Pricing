@@ -38,3 +38,34 @@ Air-BnB-Pricing/
 df.to_csv('../data/cleaned_airbnb.csv')
 
 ## 📊 Exploratory Data Analysis (EDA)
+## 📊 Key Findings: Availability Impact Analysis
+
+### 🎯 Primary Insights:
+
+
+1. **Inverse Relationship**: Properties with **lower availability** tend to command **higher prices**
+   - Scarcity drives premium pricing
+   - High-demand properties are naturally less available
+
+2. **Availability Categories**:
+   - **Low Availability (0-90 days)**: Premium pricing tier
+   - **Medium Availability (91-180 days)**: Balanced pricing
+   - **High Availability (181-270 days)**: Competitive pricing
+   - **Very High Availability (271-365 days)**: Value pricing
+
+3. **Room Type Patterns**:
+   - **Entire homes/apartments**: Lower average availability, higher prices
+   - **Private rooms**: Moderate availability and pricing
+   - **Shared rooms**: Higher availability, lower prices
+
+### 💼 Business Implications:
+
+- **Pricing Strategy**: Hosts can optimize revenue by strategic availability management
+- **Market Positioning**: Low availability signals exclusivity and quality
+- **Revenue Optimization**: Balance between occupancy rate and price premium
+- **Geographic Hotspots**: Certain neighborhoods show distinct availability-price patterns
+
+### 🔍 Statistical Evidence:
+- Correlation coefficient shows the strength of availability-price relationship
+- Price differences between high/low availability segments quantified
+- Distribution patterns reveal market segmentation opportunities
