@@ -34,17 +34,13 @@ Air-BnB-Pricing/
 #### 4. **Premium Classification**
 #### 5. **Price Normalization**
 
-## cleaned data saved in data folder
-df.to_csv('../data/cleaned_airbnb.csv')
-
-## 📊 Exploratory Data Analysis (EDA)
 ## 📊 Key Findings: Availability Impact Analysis
 
 ### 🎯 Primary Insights:
 
-
 1. **Inverse Relationship**: Properties with **lower availability** tend to command **higher prices**
-   - Scarcity drives premium pricing
+   - Scarcity
+ drives premium pricing
    - High-demand properties are naturally less available
 
 2. **Availability Categories**:

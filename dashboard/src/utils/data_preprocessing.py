@@ -6,12 +6,33 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 from sklearn.preprocessing import LabelEncoder
+import os
 
 
-def load_data(file_path='cleaned_airbnb.csv'):
+def load_data(file_path=None):
     """Load and preprocess the Airbnb dataset."""
+    if file_path is None:
+        # Try multiple possible paths for the data file
+        possible_paths = [
+            'cleaned_airbnb.csv',  # Same directory as app
+            '../data/cleaned_airbnb.csv',  # Parent data folder
+            'data/cleaned_airbnb.csv',  # Data folder from root
+            os.path.join(os.path.dirname(__file__), '..', '..', 'cleaned_airbnb.csv'),  # Dashboard level
+            os.path.join(os.path.dirname(__file__), '..', '..', '..', 'data', 'cleaned_airbnb.csv')  # Project level
+        ]
+        
+        for path in possible_paths:
+            if os.path.exists(path):
+                file_path = path
+                break
+        else:
+            st.error("Data file 'cleaned_airbnb.csv' not found in any expected location.")
+            st.info("Please ensure 'cleaned_airbnb.csv' is in the dashboard directory or data folder.")
+            return None
+    
     try:
         df = pd.read_csv(file_path)
+        st.success(f"✅ Data loaded successfully from: {file_path}")
         return preprocess_data(df)
     except FileNotFoundError:
         st.error(f"Data file '{file_path}' not found. Please check the file path.")
